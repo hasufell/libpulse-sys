@@ -43,9 +43,9 @@ fn main() {
         // bindings for.
         .clang_args(includes)
         .header("wrapper.h")
-        .whitelist_type("(pa|PA).*")
-        .whitelist_function("(pa|PA).*")
-        .whitelist_var("(pa|PA).*")
+        .whitelist_type("(pa_|PA_).*")
+        .whitelist_function("(pa_|PA_).*")
+        .whitelist_var("(pa_|PA_).*")
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.
